@@ -4025,6 +4025,56 @@
     "supports_url_context": true,
     "supports_vision": true
   },
+  "gemini-robotics-er-2-preview": {
+    "cache_read_input_token_cost": 1e-07,
+    "cache_read_input_token_cost_batches": 5e-08,
+    "input_cost_per_audio_token": 1e-06,
+    "input_cost_per_token": 1e-06,
+    "input_cost_per_token_batches": 5e-07,
+    "litellm_provider": "vertex_ai-language-models",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 65536,
+    "max_tokens": 65536,
+    "mode": "chat",
+    "output_cost_per_reasoning_token": 5e-06,
+    "output_cost_per_token": 5e-06,
+    "output_cost_per_token_batches": 2.5e-06,
+    "search_context_cost_per_query": {
+      "search_context_size_high": 0.014,
+      "search_context_size_low": 0.014,
+      "search_context_size_medium": 0.014
+    },
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/completions",
+      "/v1/batch"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_audio_input": true,
+    "supports_audio_output": false,
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_url_context": true,
+    "supports_video_input": true,
+    "supports_vision": true,
+    "supports_web_search": true,
+    "web_search_billing_unit": "per_query"
+  },
   "glm-5.1": {
     "cache_creation_input_token_cost": 1e-06,
     "cache_read_input_token_cost": 2.8e-07,
@@ -4833,6 +4883,7 @@
       "search_context_size_low": 0.025,
       "search_context_size_medium": 0.0275
     },
+    "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-search-preview",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -4840,7 +4891,8 @@
     "supports_response_schema": true,
     "supports_system_messages": true,
     "supports_tool_choice": true,
-    "supports_vision": true
+    "supports_vision": true,
+    "supports_web_search": true
   },
   "gpt-4o-mini-transcribe": {
     "deprecation_date": "2027-02-26",
@@ -5045,6 +5097,7 @@
       "search_context_size_low": 0.03,
       "search_context_size_medium": 0.035
     },
+    "source": "https://developers.openai.com/api/docs/models/gpt-4o-search-preview",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -5052,7 +5105,8 @@
     "supports_response_schema": true,
     "supports_system_messages": true,
     "supports_tool_choice": true,
-    "supports_vision": true
+    "supports_vision": true,
+    "supports_web_search": true
   },
   "gpt-4o-transcribe": {
     "deprecation_date": "2027-02-26",
@@ -7434,25 +7488,31 @@
     "cache_creation_input_token_cost": 1.25e-07,
     "cache_creation_input_token_cost_above_272k_tokens": 2.5e-07,
     "cache_creation_input_token_cost_above_272k_tokens_batches": 1.25e-07,
+    "cache_creation_input_token_cost_above_272k_tokens_decisions": 2e-07,
     "cache_creation_input_token_cost_above_272k_tokens_flex": 1.25e-07,
     "cache_creation_input_token_cost_above_272k_tokens_priority": 5e-07,
     "cache_creation_input_token_cost_batches": 6.25e-08,
+    "cache_creation_input_token_cost_decisions": 1e-07,
     "cache_creation_input_token_cost_flex": 6.25e-08,
     "cache_creation_input_token_cost_priority": 2.5e-07,
     "cache_read_input_token_cost": 1e-08,
     "cache_read_input_token_cost_above_272k_tokens": 2e-08,
     "cache_read_input_token_cost_above_272k_tokens_batches": 1e-08,
+    "cache_read_input_token_cost_above_272k_tokens_decisions": 2e-07,
     "cache_read_input_token_cost_above_272k_tokens_flex": 1e-08,
     "cache_read_input_token_cost_above_272k_tokens_priority": 4e-08,
     "cache_read_input_token_cost_batches": 5e-09,
+    "cache_read_input_token_cost_decisions": 1e-07,
     "cache_read_input_token_cost_flex": 5e-09,
     "cache_read_input_token_cost_priority": 2e-08,
     "input_cost_per_token": 1e-07,
     "input_cost_per_token_above_272k_tokens": 2e-07,
     "input_cost_per_token_above_272k_tokens_batches": 1e-07,
+    "input_cost_per_token_above_272k_tokens_decisions": 2e-07,
     "input_cost_per_token_above_272k_tokens_flex": 1e-07,
     "input_cost_per_token_above_272k_tokens_priority": 4e-07,
     "input_cost_per_token_batches": 5e-08,
+    "input_cost_per_token_decisions": 1e-07,
     "input_cost_per_token_flex": 5e-08,
     "input_cost_per_token_priority": 2e-07,
     "litellm_provider": "openai",
@@ -7463,9 +7523,11 @@
     "output_cost_per_token": 5e-07,
     "output_cost_per_token_above_272k_tokens": 7.5e-07,
     "output_cost_per_token_above_272k_tokens_batches": 3.75e-07,
+    "output_cost_per_token_above_272k_tokens_decisions": 0.0,
     "output_cost_per_token_above_272k_tokens_flex": 3.75e-07,
     "output_cost_per_token_above_272k_tokens_priority": 1.5e-06,
     "output_cost_per_token_batches": 2.5e-07,
+    "output_cost_per_token_decisions": 0.0,
     "output_cost_per_token_flex": 2.5e-07,
     "output_cost_per_token_priority": 1e-06,
     "regional_processing_uplift_multiplier_eu": 1.1,
@@ -7825,6 +7887,7 @@
     "mode": "chat",
     "output_cost_per_audio_token": 2e-05,
     "output_cost_per_token": 2.4e-06,
+    "source": "https://developers.openai.com/api/docs/models/gpt-audio-mini",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/responses",
@@ -9025,6 +9088,7 @@
       "search_context_size_low": 0.01,
       "search_context_size_medium": 0.01
     },
+    "source": "https://developers.openai.com/api/docs/models/o3-deep-research",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -9042,6 +9106,7 @@
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
     "supports_tool_choice": true,
@@ -9292,6 +9357,7 @@
       "search_context_size_low": 0.01,
       "search_context_size_medium": 0.01
     },
+    "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -9309,6 +9375,7 @@
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
     "supports_tool_choice": true,
